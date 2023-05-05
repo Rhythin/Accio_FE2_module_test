@@ -120,9 +120,17 @@ let students=[]
 async function loadjson(){
   const response =await fetch('https://gist.githubusercontent.com/harsh3195/b441881e0020817b84e34d27ba448418/raw/c4fde6f42310987a54ae1bc3d9b8bfbafac15617/demo-json-data.json')
   students = await response.json()
-  console.log (students)
+  
+  sortedStudents= [...students];
+  console.log(students)
+  renderStudents()
 }
 
+loadjson()
+
+
+
+// methord to import from hosted site
 
 // fetch('https://gist.githubusercontent.com/harsh3195/b441881e0020817b84e34d27ba448418/raw/c4fde6f42310987a54ae1bc3d9b8bfbafac15617/demo-json-data.json')
 //   .then(response => response.json())
@@ -133,8 +141,6 @@ async function loadjson(){
 //   .catch(error => console.error(error));
 
   // const students=JSON.parse(JSON.stringify(studentstemp))
-
-  console.log(students)
 
 const studentTable = document.querySelector('#student-table tbody');
 const sortNameAscBtn = document.querySelector('#sortNameAsc');
