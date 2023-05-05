@@ -109,7 +109,7 @@
 
 // import jsonData from './data.json' assert {type: 'json'}
 // const students =JSON.parse(JSON.stringify(jsonData))
-// console.log(students)
+// // console.log(students)
 
 
 // 
@@ -122,7 +122,7 @@ async function loadjson(){
   students = await response.json()
   
   sortedStudents= [...students];
-  console.log(students)
+  // console.log(students)
   renderStudents()
 }
 
