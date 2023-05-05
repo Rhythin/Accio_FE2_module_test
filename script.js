@@ -1,4 +1,5 @@
-// const students = [{"id":1,"first_name":"Chadwick","last_name":"Ayre","email":"cayre0@cam.ac.uk","gender":"Male","img_src":"https://robohash.org/corporisquiaperiam.png?size=50x50&set=set1","class":11,"marks":18,"passing":false,"city":"Moorreesburg"},
+// const students = [
+// {"id":1,"first_name":"Chadwick","last_name":"Ayre","email":"cayre0@cam.ac.uk","gender":"Male","img_src":"https://robohash.org/corporisquiaperiam.png?size=50x50&set=set1","class":11,"marks":18,"passing":false,"city":"Moorreesburg"},
 // {"id":2,"first_name":"Abrahan","last_name":"Seabrocke","email":"aseabrocke1@ocn.ne.jp","gender":"Male","img_src":"https://robohash.org/autiuredistinctio.png?size=50x50&set=set1","class":3,"marks":27,"passing":true,"city":"Kampong Thom"},
 // {"id":3,"first_name":"Nathanael","last_name":"Laye","email":"nlaye2@typepad.com","gender":"Male","img_src":"https://robohash.org/dolorumsedut.png?size=50x50&set=set1","class":10,"marks":89,"passing":false,"city":"Niquinohomo"},
 // {"id":4,"first_name":"Luigi","last_name":"Balcers","email":"lbalcers3@reverbnation.com","gender":"Agender","img_src":"https://robohash.org/eumaliquamest.png?size=50x50&set=set1","class":8,"marks":30,"passing":false,"city":"Nashtā Rūd"},
@@ -97,18 +98,32 @@
 // {"id":97,"first_name":"Livy","last_name":"MacCleay","email":"lmaccleay2o@bravesites.com","gender":"Female","img_src":"https://robohash.org/remdoloreset.png?size=50x50&set=set1","class":6,"marks":50,"passing":true,"city":"Alexandria"},
 // {"id":98,"first_name":"Drugi","last_name":"Bordone","email":"dbordone2p@slate.com","gender":"Male","img_src":"https://robohash.org/autminimanulla.png?size=50x50&set=set1","class":4,"marks":63,"passing":true,"city":"Senekal"},
 // {"id":99,"first_name":"Gordon","last_name":"Vieyra","email":"gvieyra2q@geocities.com","gender":"Male","img_src":"https://robohash.org/nullaeumaut.png?size=50x50&set=set1","class":11,"marks":59,"passing":false,"city":"Nīkshahr"},
-// {"id":100,"first_name":"Zoe","last_name":"Moorhead","email":"zmoorhead2r@sfgate.com","gender":"Female","img_src":"https://robohash.org/fugiatcorporisdeleniti.png?size=50x50&set=set1","class":8,"marks":43,"passing":true,"city":"Makin Village"}];
+// {"id":100,"first_name":"Zoe","last_name":"Moorhead","email":"zmoorhead2r@sfgate.com","gender":"Female","img_src":"https://robohash.org/fugiatcorporisdeleniti.png?size=50x50&set=set1","class":8,"marks":43,"passing":true,"city":"Makin Village"}
+
+// ];
 
 
 // the assignment dosen't mention how to import json so multiple methords can be used
 
 // importing from file in same folder
 
-import jsonData from './data.json'
+import jsonData from './data.json' assert {type: 'json'}
 const students =JSON.parse(JSON.stringify(jsonData))
+console.log(students)
 
 
+// 
 
+// example of importing data
+// let students=[]
+
+// fetch('https://gist.githubusercontent.com/harsh3195/b441881e0020817b84e34d27ba448418/raw/c4fde6f42310987a54ae1bc3d9b8bfbafac15617/demo-json-data.json')
+//   .then(response => response.json())
+//   .then(data => {
+//     students = data;
+//     console.log(students); // Outputs the fetched JSON data
+//   })
+//   .catch(error => console.error(error));
 
 
 const studentTable = document.querySelector('#student-table tbody');
